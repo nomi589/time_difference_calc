@@ -17,7 +17,11 @@ submitBtn.addEventListener("click", (event) => {
   const endTimestamp = new Date(`${endDate} ${endTime}`);
   const timeDifference = endTimestamp - startTimestamp;
 
-  resultDisplay.innerText = formatTime(timeDifference);
+  if (timeDifference < 0) {
+    resultDisplay.innerHTML = "Time B should be <em>after</em> Time A";
+  } else {
+    resultDisplay.innerText = formatTime(timeDifference);
+  }
 });
 
 function formatTime(milliseconds) {
