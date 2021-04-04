@@ -20,13 +20,18 @@
         <div>
           <label for="end-date">Time B:</label>
           <input type="date" id="end-date" />
-          <input type="time" id="start-time" />
+          <input type="time" id="end-time" />
         </div>
 
         <div>
-          <input type="submit" value="Calculate (Time B - Time A)" />
+          <input
+            type="submit"
+            id="submit"
+            value="Calculate (Time B - Time A)"
+          />
         </div>
       </form>
+      <div id="result"></div>
     </section>
 
     <script src="./script.js"></script>
